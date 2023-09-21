@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <title>practice-1</title>
+  </head>
+  <body>
+    <button class="btn">Показать форму</button>
+    <div class="modal">
+      <form class="form">
+        <h1 class="form__label">Стать партнёром проекта</h1>
+        <div class="inputs">
+          <div class="head">
+            <div class="head-left">
+              <div class="input-container">
+                <input type="text" class="inputs__item" id="organization-name" placeholder="" required>
+                <label for="organization-name" class="inputs__label">
+                  <span class="inputs__label_red">✱</span>Название организации
+                </label>
+              </div>
+              <div class="input-container">
+                <input type="text" class="inputs__item" id="phone" placeholder="" required>
+                <label for="phone" class="inputs__label">
+                  <span class="inputs__label_red">✱</span>Телефон
+                </label>
+              </div>
+              <div class="input-container">
+                <input type="email" class="inputs__item" id="email" placeholder="" required>
+                <label for="email" class="inputs__label">
+                  <span class="inputs__label_red">✱</span>E-mail
+                </label>
+              </div>
+            </div>
+            <div class="head-rigth">
+              <div class="image-upload">
+                <p class="image-upload__label">
+                  <span class="image-upload__label_red">✱</span>Логотип (jpeg, png)
+                </p>
+                <div class="file-drop-area">
+                  <img src="./img/close.svg" class="file-drop-area__icon">
+                  <img src="./img/draganddrop.svg">
+                  <label class="file-drop-area__text" for="file">Выберите файл</label>
+                  <input class="file-drop-area__input" type="file" id="file" accept=".jpeg, .jpg, .png" required>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="body">
+            <div class="input-container">
+              <select class="inputs__item" id="direction" required>
+                <option value="ecology">Экология</option>
+                <option value="it">Информационные технологии</option>
+                <option value="industry">Промышленность</option>
+              </select>
+              <label for="direction" class="inputs__label">
+                <span class="inputs__label_red">✱</span>Направление
+              </label>
+            </div>
+            <div class="input-container">
+              <input type="text" class="inputs__item inputs__item_noLabel" placeholder="Ссылка на ваш сайт">
+              <img src="./img/www.svg" class="inputs__icon">
+            </div>
+            <div class="input-container">
+              <input type="text" class="inputs__item inputs__item_noLabel" placeholder="Ссылка на ваш VK">
+              <img src="./img/vk.svg" class="inputs__icon">
+            </div>
+            <div class="input-container">
+              <input type="text" class="inputs__item inputs__item_noLabel" placeholder="Ссылка на ваш OK">
+              <img src="./img/ok.svg" class="inputs__icon">
+            </div>
+            <div class="input-container">
+              <input type="text" class="inputs__item inputs__item_noLabel" placeholder="Ссылка на ваш Facebook">
+              <img src="./img/facebook.svg" class="inputs__icon">
+            </div>
+            <div class="input-container">
+              <input type="text" class="inputs__item inputs__item_noLabel" placeholder="Ссылка на ваш Instagram">
+              <img src="./img/instagram.svg" class="inputs__icon">
+            </div>
+            <div class="input-container">
+              <input type="text" class="inputs__item inputs__item_noLabel" placeholder="Ссылка на ваш YouTube">
+              <img src="./img/youtube.svg" class="inputs__icon">
+            </div>
+            <div class="input-container">
+              <input type="text" class="inputs__item" id="manager" placeholder="">
+              <label for="manager" class="inputs__label">Руководитель</label>
+            </div>
+          </div>
+        </div>
+        <div class="buttons">
+          <button class="buttons__action">Стать партнёром проекта</button>
+          <button class="buttons__cancel">Отменить</button>
+        </div>
+      </form>
+    </div>
+    
+    <script src="./main.js"></script>
+    <script src="./sctript/dragAndDrop.js"></script>
+    <script src="./sctript/phoneMask.js"></script>
+
+  </body>
+</html>
