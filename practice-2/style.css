@@ -1,0 +1,15 @@
+.table{
+    border: 1px solid #DDDDDD;
+	border-collapse: collapse;
+    font-family: 'Segoe UI', sans-serif
+}
+.table th{
+    font-weight: bold;
+	padding: 5px;
+	background: #EFEFEF;
+	border: 1px solid #DDDDDD;
+}
+.table td{
+    border: 1px solid #DDDDDD;
+	padding: 5px;
+}
