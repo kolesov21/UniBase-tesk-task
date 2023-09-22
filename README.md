@@ -1,6 +1,7 @@
 # UniBase-tesk-task
 
 Весь код расположен в одноимённых папках, ниже ссылки на GitHub Pages для второй части
+
 Часть 1 (Теория)
 1. https://github.com/kolesov21/UniBase-tesk-task/blob/main/theory-1/script.js
 
