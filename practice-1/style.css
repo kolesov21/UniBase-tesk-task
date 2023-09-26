@@ -201,16 +201,21 @@
   left: 0;
 }
 
-@media (max-width: 600px) {
-  .form {
-    padding: 53px 78px;
-  }
+@media (max-width: 670px) {
   .head {
     flex-direction: column;
   }
+  .head-left{
+    min-width: 0;
+  }
 }
 @media (max-width: 425px) {
-  .form {
-    padding: 53px 38px;
+  .form{
+    padding: 53px 68px; 
+  }
+}
+@media (max-width: 320px) {
+  .form{
+    padding: 53px 48px; 
   }
 }

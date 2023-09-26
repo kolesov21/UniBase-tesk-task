@@ -13,32 +13,24 @@ dropArea.addEventListener('dragover', preventDefaultBehavior);
 
 dropArea.addEventListener('drop', function(event) {
     preventDefaultBehavior(event);
-    const file = event.dataTransfer.files[0];
+    updateBackgroundImage(event.dataTransfer.files[0]);
 });
 
-fileInput.addEventListener('click', function(event) {
+fileInput.addEventListener('change', function(event) {
     preventDefaultBehavior(event);
-    const imageURL = prompt('Укажите ссылку на картинку');
-    isImageURL(imageURL);
-
-    function isImageURL(url) {
-        const img = new Image();
-
-        img.onload = function() {
-          if (img.width > 0 && img.height > 0) {
-            dropArea.style.backgroundImage = `url(${imageURL})`;
-          } else {
-            alert("Ссылка не ведет на изображение.");
-          }
-        };
-      
-        img.onerror = function() {
-          alert("Ошибка при загрузке изображения.");
-        };
-
-        img.src = url;
-    }
+    updateBackgroundImage(event.target.files[0]);
 });
+
+function updateBackgroundImage(file){
+  const reader = new FileReader();
+
+  reader.onload = function(event) {
+  const imageURL = event.target.result;
+  dropArea.style.backgroundImage = `url(${imageURL})`;
+  }
+
+  reader.readAsDataURL(file);
+}
 
 clearIcon.addEventListener('click', function(){
     dropArea.style.backgroundImage = "url(./img/image-example.png)";
