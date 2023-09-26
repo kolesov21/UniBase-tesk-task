@@ -1,8 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@800&family=PT+Sans:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:wght@800&family=PT+Sans:wght@400;700&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .form {
   background-color: #fff;
-  max-width: 558px;
-  width: 100%;
   overflow-y: auto;
   padding: 53px 98px;
   border-radius: 12px;
@@ -16,7 +20,6 @@
   font-weight: 800;
   line-height: 34px;
   padding-bottom: 35px;
-  margin: 0px;
 }
 
 .head {
@@ -27,8 +30,7 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  max-width: 362px;
-  width: 100%;
+  min-width: 362px;
 }
 
 .image-upload {
@@ -48,13 +50,17 @@
 }
 .image-upload__label_red {
   color: #D90000;
+  font-size: 12px;
 }
 
 .file-drop-area {
   position: relative;
   background-image: url("./img/image-example.png");
-  width: 163px;
-  height: 163px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 164px;
+  height: 164px;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
@@ -111,6 +117,8 @@
 }
 .inputs__label_red {
   color: #D90000;
+  font-size: 12px;
+  line-height: 16px;
 }
 .inputs__item {
   font-family: "PT Sans", sans-serif;
@@ -121,7 +129,6 @@
   font-size: 16px;
   line-height: 24px;
   padding: 22px 16px 8px 16px;
-  box-sizing: border-box;
 }
 .inputs__item:focus ~ label, .inputs__item:not(:placeholder-shown) ~ label {
   font-size: 12px;
@@ -129,9 +136,7 @@
   top: 8px;
 }
 .inputs__item_noLabel {
-  padding: 16px;
-  padding-right: 32px;
-  width: 100%;
+  padding: 16px 32px 16px 16px;
 }
 .inputs__icon {
   position: absolute;
@@ -150,13 +155,13 @@
   color: #FFF;
   font-family: "Lato", sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 18px;
   background-color: #E5266E;
   padding: 14px 0px 16px 0px;
   border: 0px;
   border-radius: 4px;
-  max-width: 557px;
+  max-width: 558px;
   width: 100%;
   cursor: pointer;
 }
